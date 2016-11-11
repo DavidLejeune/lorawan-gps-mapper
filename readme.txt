@@ -36,8 +36,8 @@
 
     Data can be queried via the MQTT protocol ( http://mqtt.org )
 
-    MQTT is a publish/subscribe protocol. Meaning he application will have to
-    subscribe to the data. When a sensor has a new measurement is will publish
+    MQTT is a publish/subscribe protocol. Meaning the application will have to
+    subscribe to the data. When a sensor has a new measurement it will publish
     this new value to it's subscribers. These data values will be stored in a
     database coupled to the application.
 
@@ -54,15 +54,15 @@
 
     HISTORY AND STATISTICS
     ----------------------
-    Logged in user should be able to retrieve their own data.
+    Logged in users should be able to retrieve their own data.
     This data should be represented both graphically (map) and also in raw data.
     Various quantifications should be implemented on this data (averages, maximum,
     ...,filtering by time slots)
 
     LIVE UPDATES
     ------------
-    New data publish to the database should display on the open webpage.
-    This can be realized using a websocket. Polling or AJAX request should not
+    New data published to the database should display on an opened webpage.
+    This can be realized by using a websocket. Polling or AJAX requests should not
     be used as these are not the most efficient solutions.
     Rails 5 supports websocket via ActionCable
     (http://edgeguides.rubyonrails.org/action_cable_overview.html).
@@ -71,7 +71,7 @@
     -----
         NoSQL Database
         --------------
-        Instead of MySQL or other relational database we could implement a
+        Instead of MySQL or other relational databases we could implement a
         non-relational database (NoSQL).
         Each of these databases can be built around it's own rules and query style.
         Examples :
@@ -84,7 +84,7 @@
 
         JSON API
         --------
-        All data and statics should be made available through a JSON API.
+        All data and statistics should be made available through a JSON API.
         This so other applications can retrieve the data (e.g. Windows Universal
         App, Android,... )
 
