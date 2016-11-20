@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
       # Log the user in and redirect to the user's show page.
     else
       # Create an error message.
+      flash[:danger] = 'Invalid email/password combination' # Not quite right!
       render 'new'
     end
   end
