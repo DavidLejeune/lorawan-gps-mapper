@@ -1,7 +1,35 @@
 <% provide(:title, "Home") %>
-<h1>Sample App</h1>
+<!-- <h1>Sample App</h1>
 <p>
   This is the home page for the
   <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
   sample application.
-</p>
+</p> -->
+
+<!-- code for the map -->
+
+<<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.27.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.27.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute;right:150px; top:50px; bottom:0; width:80%;height:80%; }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ3NtbWFuNyIsImEiOiJjaXZoeHpoMmcwMGFhMnVwazVqczQ4eTJrIn0.AklbOdAfUtA4DZmOWgthaw';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
+    center: [3.75, 51], // starting position
+    zoom: 8 // starting zoom
+});
+</script>
+
+</body>

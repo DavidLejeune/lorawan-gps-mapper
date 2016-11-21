@@ -69,6 +69,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    mapbox-rails (1.6.1.1)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -159,6 +160,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails (= 4.1.1)
   listen (= 3.0.8)
+  mapbox-rails
   pg (= 0.18.4)
   puma (~> 3.4.0)
   rails (~> 5.0.0, >= 5.0.0.1)
