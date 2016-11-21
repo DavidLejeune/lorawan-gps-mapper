@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+ $topbar-background: #222;
+ @import 'foundation';
+
+
+ .welcome-callout{
+   @include callout-style ($secondary-color);
+
+   padding : 4em;
+   margin: 2em;
+   text-align: center;
+ }
+
+ .top-bar{
+   .menu-text{
+     color: white;
+   }
+ }
+
+.debug_dump{
+  @include callout-style($secondary-color);
+  padding : 1em;
+  margin: 2em;
+}
