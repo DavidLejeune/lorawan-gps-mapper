@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :data
   resources :sensors
   root 'static_pages#home'
   
