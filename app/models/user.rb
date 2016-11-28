@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  has_many: sensors
+
+
   before_save :email_to_downcase
   validates :name, presence: true, length: { maximum: 50 }
 
