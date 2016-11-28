@@ -1,4 +1,4 @@
 class Sensor < ApplicationRecord
   belongs_to :user
-  has_many :data
+  has_many :locations
 end
