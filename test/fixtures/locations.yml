@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  longitude: 1.5
+  latitude: 1.5
+  height: 1
+  accuracy: 1
+
+two:
+  longitude: 1.5
+  latitude: 1.5
+  height: 1
+  accuracy: 1

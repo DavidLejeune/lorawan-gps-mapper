@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-
   get 'sessions/new'
+  resources :locations
   resources :data
   resources :sensors
   root 'static_pages#home'
