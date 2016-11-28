@@ -29,7 +29,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # gem 'mysql', '~> 2.9', '>= 2.9.1'
-gem 'mysql2', '~> 0.4.5'
 
 group :development, :test do
   gem 'sqlite3', '1.3.12'
@@ -47,7 +46,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg', '0.18.4'
+  gem 'mysql2', '~> 0.4.5'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
