@@ -12,7 +12,9 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, length: { maximum: 50 }
 
   def email_to_downcase
-    email = email.downcase
+    email = email.to_s.downcase
   end
+
+  #has_secure_password
 
 end
