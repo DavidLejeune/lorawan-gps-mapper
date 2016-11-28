@@ -20,8 +20,10 @@ sensor_id = '+/devices/+/up'
     # If you pass a block to the get method, then it will loop
     c.get(sensor_id) do |topic,message|
       obj = JSON.parse("#{message}")
+      dev_eui = obj['dev_eui']
       latitude = obj['fields']['lat']
       longitude = obj['fields']['long']
+      puts "dev_eui = #{dev_eui}"
       puts "latitude = #{latitude}"
       puts "longitude = #{longitude}"
 
