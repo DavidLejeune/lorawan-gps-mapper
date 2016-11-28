@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   get '/signup', to: 'users#new'
 
+    get '/map', to: 'static_pages#map'
+
+
   resources :users
 
 
