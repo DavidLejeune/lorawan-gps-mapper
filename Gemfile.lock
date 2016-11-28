@@ -84,6 +84,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.9.1)
+    mqtt (0.4.0)
     multi_json (1.12.1)
     mysql2 (0.4.5-x86-mingw32)
     nio4r (1.2.1)
@@ -178,6 +179,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails (= 4.1.1)
   listen (= 3.0.8)
+  mqtt
   mysql2 (~> 0.4.5)
   puma (~> 3.4.0)
   rails (~> 5.0.0, >= 5.0.0.1)
