@@ -7,7 +7,6 @@
 </p> -->
 
 <!-- code for the map -->
-
 <<head>
     <meta charset='utf-8' />
     <title></title>
@@ -22,7 +21,7 @@
 <body>
 
 <div id='map'></div>
-<script>
+<!-- <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiZ3NtbWFuNyIsImEiOiJjaXZoeHpoMmcwMGFhMnVwazVqczQ4eTJrIn0.AklbOdAfUtA4DZmOWgthaw';
 var map = new mapboxgl.Map({
     container: 'map', // container id
@@ -30,6 +29,11 @@ var map = new mapboxgl.Map({
     center: [3.75, 51], // starting position
     zoom: 8 // starting zoom
 });
-</script>
+
+var marker = new mapboxgl.Marker()
+.setLngLat([3.75, 51])
+.addTo(map);
+
+</script> -->
 
 </body>
