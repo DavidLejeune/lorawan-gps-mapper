@@ -28,6 +28,7 @@ class MqttJob < ApplicationJob
         puts "dev_eui = #{dev_eui}"
         puts "latitude = #{latitude}"
         puts "longitude = #{longitude}"
+        #puts "#{obj}"
 
       end
     end
