@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20161128094406) do
     t.integer  "accuracy"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "senor_id"
+    t.string   "sensor_id"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20161128094406) do
   create_table "sensors", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
-    t.integer  "EUI_device"
+    t.string   "dev_eui"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
