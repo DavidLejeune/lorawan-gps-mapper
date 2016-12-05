@@ -92,11 +92,7 @@ GEM
       mini_portile2 (~> 2.1.0)
     nokogiri (1.6.8.1-x86-mingw32)
       mini_portile2 (~> 2.1.0)
-<<<<<<< HEAD
-    puma (3.4.0)
-=======
     puma (3.6.0)
->>>>>>> d85c0f8fb6d362db7a84d89d17a6b32f0e4cd7fb
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
