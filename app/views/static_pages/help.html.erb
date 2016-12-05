@@ -1,9 +1,79 @@
 <% provide(:title, "Help") %>
 <h1>Help</h1>
 <p>
-  Get help on the Ruby on Rails Tutorial at the
-  <a href="http://www.railstutorial.org/help">Rails Tutorial help section</a>.
-  To get help on this sample app, see the
-  <a href="http://www.railstutorial.org/book"><em>Ruby on Rails Tutorial</em>
-  book</a>.
+  <pre>
+   +-+-+ +-+-+-+-+-+-+-+-+-+-+-+
+   |1|.| |D|e|s|c|r|i|p|t|i|o|n|
+   +-+-+ +-+-+-+-+-+-+-+-+-+-+-+
+
+     An application that allows multiple users to log locations coming from
+     different types of gps modules to a website.
+
+     The data sent from the gps-modules are longitude, latitude , height and
+     accuracy . This could later be extended to include speed and direction.
+     This data will be consultable both in table form and on a map.
+
+   +-+-+ +-+-+-+-+-+-+-+-+-+-+
+   |2|.| |T|e|c|h|n|o|l|o|g|y|
+   +-+-+ +-+-+-+-+-+-+-+-+-+-+
+
+     Data will be sent by LoRaWAN sensors. These sensors are coupled to the network
+     of The Things Network ( http://www.thethingsnetwork.com )
+
+     Data can be queried via the MQTT protocol ( http://mqtt.org )
+
+     MQTT is a publish/subscribe protocol. Meaning the application will have to
+     subscribe to the data. When a sensor has a new measurement it will publish
+     this new value to it's subscribers. These data values will be stored in a
+     database coupled to the application.
+
+   +-+-+ +-+-+-+-+-+-+-+-+
+   |3|.| |F|e|a|t|u|r|e|s|
+   +-+-+ +-+-+-+-+-+-+-+-+
+
+     AUTHENTICATION
+     --------------
+     The system should allow multiple users to independently use the website.
+     Users should have to register to be able to use the website.
+     This registration will allow them to add their own gps module and also see
+     their individual data.
+
+     HISTORY AND STATISTICS
+     ----------------------
+     Logged in users should be able to retrieve their own data.
+     This data should be represented both graphically (map) and also in raw data.
+     Various quantifications should be implemented on this data (averages, maximum,
+     ...,filtering by time slots)
+
+     LIVE UPDATES
+     ------------
+     New data published to the database should display on an opened webpage.
+     This can be realized by using a websocket. Polling or AJAX requests should not
+     be used as these are not the most efficient solutions.
+     Rails 5 supports websocket via ActionCable
+     (http://edgeguides.rubyonrails.org/action_cable_overview.html).
+
+     EXTRA
+     -----
+         NoSQL Database
+         --------------
+         Instead of MySQL or other relational databases we could implement a
+         non-relational database (NoSQL).
+         Each of these databases can be built around it's own rules and query style.
+         Examples :
+                   MongoDB - https://www.mongodb.com/
+                   RethinkDB - https://rethinkdb.com/
+                   InfluxDB - https://www.influxdata.com/
+
+         Normal operation with standard sqlite or MySQL must be ensured (in case
+         of NoSQL failure)
+
+         JSON API
+         --------
+         All data and statistics should be made available through a JSON API.
+         This so other applications can retrieve the data (e.g. Windows Universal
+         App, Android,... )
+
+   </pre>
+
 </p>
