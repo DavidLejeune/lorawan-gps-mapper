@@ -8,7 +8,26 @@ $( document ).ready(function() {
       zoom: 9 // starting zoom
   });
   console.log(mymap);
+for (var i = 0; i < 10; i++) {
+
+  $(document).ready(function(){
+          $.getJSON("http://localhost:3000/data.json", function(result){
+            $.each(result, function(i, field){
+              console.log(field.longitude);
+              window.marker = new mapboxgl.Marker()
+              .setLngLat([field.longitude,field.latitude])
+              .addTo(mymap);
+           });
+          });
+      });
+
+}
   window.marker = new mapboxgl.Marker()
   .setLngLat([3.75, 51])
   .addTo(mymap);
+
 })
+
+
+
+// http://localhost:3000/data.json
