@@ -1,5 +1,6 @@
 
-$( document ).ready(function() {
+
+$( document ).on("turbolinks:load",function() {
   mapboxgl.accessToken = 'pk.eyJ1IjoiZ3NtbWFuNyIsImEiOiJjaXZoeHpoMmcwMGFhMnVwazVqczQ4eTJrIn0.AklbOdAfUtA4DZmOWgthaw';
   window.mymap = new mapboxgl.Map({
       container: 'map', // container id
