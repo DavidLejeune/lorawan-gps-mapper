@@ -12,7 +12,7 @@ $( document ).on("turbolinks:load",function() {
 for (var i = 0; i < 10; i++) {
 
   $(document).ready(function(){
-          $.getJSON("http://localhost:3000/data.json", function(result){
+          $.getJSON("/data.json", function(result){
             $.each(result, function(i, field){
               console.log(field.longitude);
               window.marker = new mapboxgl.Marker()
