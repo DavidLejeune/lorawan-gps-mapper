@@ -24,6 +24,7 @@ $( document ).on("turbolinks:load",function() {
             $.each(result, function(i, field){
 
 
+
                     // console.log(field.longitude);
                     window.marker = new mapboxgl.Marker()
                     .setLngLat([field.longitude,field.latitude])
