@@ -14,11 +14,13 @@ for (var i = 0; i < 10; i++) {
   $(document).ready(function(){
           $.getJSON("/data.json", function(result){
             $.each(result, function(i, field){
-              console.log(field.longitude);
-              window.marker = new mapboxgl.Marker()
-              .setLngLat([field.longitude,field.latitude])
-              .addTo(mymap);
-           });
+                  
+                    console.log(field.longitude);
+                    window.marker = new mapboxgl.Marker()
+                    .setLngLat([field.longitude,field.latitude])
+                    .addTo(mymap);
+
+                 });
           });
       });
 

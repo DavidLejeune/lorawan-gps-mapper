@@ -4,7 +4,7 @@ class DataController < ApplicationController
   # GET /data
   # GET /data.json
   def index
-    @data = Datum.all
+    @data = Datum.where("created_at >= ?", (Time.now - 24.hours))
   end
 
   # GET /data/1
