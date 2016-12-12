@@ -22,8 +22,6 @@ $( document ).on("turbolinks:load",function() {
               result = result.show_since;
             }
             $.each(result, function(i, field){
-
-
                     // console.log(field.longitude);
                     window.marker = new mapboxgl.Marker()
                     .setLngLat([field.longitude,field.latitude])
@@ -33,22 +31,4 @@ $( document ).on("turbolinks:load",function() {
           });
       });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 })
-
-
-
-// http://localhost:3000/data.json
