@@ -21,8 +21,49 @@ $( document ).on("turbolinks:load",function() {
             if(sensor_id){
               result = result.show_since;
             }
+
+            var coordinates = [];
             $.each(result, function(i, field){
 
+              coordinates.push ([
+                field.longitude,
+                field.latitude
+              ])
+
+
+                 });
+                 console.log(coordinates);
+
+            window.mymap.addSource("route", {
+                   "type": "geojson",
+                   "data": {
+                       "type": "Feature",
+                       "properties": {},
+                       "geometry": {
+                           "type": "LineString",
+                           "coordinates":
+                              coordinates
+                           
+                       }
+                   }
+               });
+
+               window.mymap.addLayer({
+       "id": "route",
+       "type": "line",
+       "source": "route",
+       "layout": {
+           "line-join": "round",
+           "line-cap": "round"
+       },
+       "paint": {
+           "line-color": "#888",
+           "line-width": 8
+       }
+   });
+
+
+            $.each(result, function(i, field){
 
 
                     // console.log(field.longitude);
