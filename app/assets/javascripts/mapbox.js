@@ -12,10 +12,18 @@ $( document ).on("turbolinks:load",function() {
 for (var i = 0; i < 10; i++) {
 
   $(document).ready(function(){
-          $.getJSON("/data.json", function(result){
+      var sensor_id = $("#map").data('sensor-id');
+      var path = "/data.json";
+      if(sensor_id) {
+        path = "/sensors/" + sensor_id + ".json";
+      }
+          $.getJSON(path, function(result){
+            if(sensor_id){
+              result = result.show_since;
+            }
             $.each(result, function(i, field){
-                  
-                    console.log(field.longitude);
+
+                    // console.log(field.longitude);
                     window.marker = new mapboxgl.Marker()
                     .setLngLat([field.longitude,field.latitude])
                     .addTo(mymap);

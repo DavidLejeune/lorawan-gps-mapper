@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<div id='map' data-sensor-id='<%= @sensor.id %>'></div>
+
 <p>
   <strong>Name:</strong>
   <%= @sensor.name %>
@@ -16,8 +18,8 @@
 </p>
 
 <div class="">
-  <%= @sensor.data.inspect %>
-
+  <!-- <%= @sensor.data.inspect %> -->
+  <%= @sensor.show_since.count %>
 </div>
 
 <%= link_to 'Edit', edit_sensor_path(@sensor) %> |
