@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  post 'api/position'
   get 'sessions/new'
   resources :locations
   resources :data
