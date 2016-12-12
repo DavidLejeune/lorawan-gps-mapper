@@ -1,5 +1,6 @@
 
-$( document ).ready(function() {
+
+$( document ).on("turbolinks:load",function() {
   mapboxgl.accessToken = 'pk.eyJ1IjoiZ3NtbWFuNyIsImEiOiJjaXZoeHpoMmcwMGFhMnVwazVqczQ4eTJrIn0.AklbOdAfUtA4DZmOWgthaw';
   window.mymap = new mapboxgl.Map({
       container: 'map', // container id
@@ -11,7 +12,7 @@ $( document ).ready(function() {
 for (var i = 0; i < 10; i++) {
 
   $(document).ready(function(){
-          $.getJSON("http://localhost:3000/data.json", function(result){
+          $.getJSON("/data.json", function(result){
             $.each(result, function(i, field){
               console.log(field.longitude);
               window.marker = new mapboxgl.Marker()
