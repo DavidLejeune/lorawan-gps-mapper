@@ -14,9 +14,8 @@
  *= require_self
  */
 
- $topbar-background: #222;
  @import 'foundation';
-
+$topbar-background: #45464a;
 
  .welcome-callout{
    @include callout-style ($secondary-color);
@@ -28,9 +27,13 @@
 
  .top-bar{
    .menu-text{
-     color: white;
+     color: #bdb7ab;
    }
  }
+
+.element.style{
+  background-color: #cbc6b6;
+}
 
 .debug_dump{
   @include callout-style($secondary-color);
@@ -44,4 +47,9 @@
 #map {  width:80%;height:700px; }
 
 .mapboxgl-marker {position: absolute; top: 0; left: 0 ; will-change: transform ; width: 30px;height: 30px;
-background-image: url("http://www.clker.com/cliparts/B/B/1/E/y/r/marker-pin-google.svg"); background-size: 30px 30px;}
+  background-image: url("http://www.clker.com/cliparts/B/B/1/E/y/r/marker-pin-google.svg"); background-size: 30px 30px;}
+
+#footer {
+      position:fixed;
+      bottom:0px;
+  }
