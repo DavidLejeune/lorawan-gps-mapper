@@ -1,5 +1,4 @@
-
-
+//code for creating the map on the page
 $( document ).on("turbolinks:load",function() {
   mapboxgl.accessToken = 'pk.eyJ1IjoiZ3NtbWFuNyIsImEiOiJjaXZoeHpoMmcwMGFhMnVwazVqczQ4eTJrIn0.AklbOdAfUtA4DZmOWgthaw';
   window.mymap = new mapboxgl.Map({
@@ -10,7 +9,7 @@ $( document ).on("turbolinks:load",function() {
   });
   console.log(mymap);
 
-
+//code to get data out of the database
   $(document).ready(function(){
       var sensor_id = $("#map").data('sensor-id');
       var path = "/data.json";
@@ -33,7 +32,7 @@ $( document ).on("turbolinks:load",function() {
 
                  });
                  console.log(coordinates);
-
+//add line to each point
             window.mymap.addSource("route", {
                    "type": "geojson",
                    "data": {
@@ -43,11 +42,11 @@ $( document ).on("turbolinks:load",function() {
                            "type": "LineString",
                            "coordinates":
                               coordinates
-                           
+
                        }
                    }
                });
-
+//add line to the map
                window.mymap.addLayer({
        "id": "route",
        "type": "line",
@@ -61,33 +60,16 @@ $( document ).on("turbolinks:load",function() {
            "line-width": 8
        }
    });
-
-
-            $.each(result, function(i, field){
-
-
+   //add markers to the map
+              $.each(result, function(i, field){
                     // console.log(field.longitude);
                     window.marker = new mapboxgl.Marker()
-                    .setLngLat([field.longitude,field.latitude])
+                    .setLngLat([field.longitude - 0.00002,field.latitude + 0.00002])
                     .addTo(mymap);
 
                  });
           });
       });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 })
 
