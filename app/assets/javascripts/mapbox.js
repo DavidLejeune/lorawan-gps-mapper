@@ -64,7 +64,7 @@ $( document ).on("turbolinks:load",function() {
               $.each(result, function(i, field){
                     // console.log(field.longitude);
                     window.marker = new mapboxgl.Marker()
-                    .setLngLat([field.longitude - 0.00002,field.latitude + 0.00002])
+                    .setLngLat([field.longitude ,field.latitude])
                     .addTo(mymap);
 
                  });
