@@ -4,7 +4,7 @@ $( document ).on("turbolinks:load",function() {
   window.mymap = new mapboxgl.Map({
       container: 'map', // container id
       style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
-      center: [3.75, 51], // starting position
+      center: [3.2, 51.2], // starting position
       zoom: 9 // starting zoom
   });
   console.log(mymap);
@@ -33,33 +33,36 @@ $( document ).on("turbolinks:load",function() {
                  });
                  console.log(coordinates);
 //add line to each point
-            window.mymap.addSource("route", {
-                   "type": "geojson",
-                   "data": {
-                       "type": "Feature",
-                       "properties": {},
-                       "geometry": {
-                           "type": "LineString",
-                           "coordinates":
-                              coordinates
 
-                       }
-                   }
-               });
-//add line to the map
-               window.mymap.addLayer({
-       "id": "route",
-       "type": "line",
-       "source": "route",
-       "layout": {
-           "line-join": "round",
-           "line-cap": "round"
-       },
-       "paint": {
-           "line-color": "#888",
-           "line-width": 8
-       }
-   });
+  window.mymap.addSource("route", {
+    "type": "geojson",
+    "data": {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates":
+        coordinates
+
+      }
+    }
+  });
+  //add line to the map
+  window.mymap.addLayer({
+    "id": "route",
+    "type": "line",
+    "source": "route",
+    "layout": {
+      "line-join": "round",
+      "line-cap": "round"
+    },
+    "paint": {
+      "line-color": "#888",
+      "line-width": 8
+    }
+  });
+
+
    //add markers to the map
               $.each(result, function(i, field){
                     // console.log(field.longitude);
